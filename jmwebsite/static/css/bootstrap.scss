@@ -1,0 +1,40 @@
+// Theme colors
+$primary:       #F79226;
+$secondary:     #54BC81;
+$success:       #96BC2A;
+$info:          #3879DA;
+$warning:       #C84328;
+$danger:        #FFBE5E;
+$light:         #E4E2E1;
+$dark:          #1B1B1B;
+
+// Theme-colors-map
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
+// Grid columns
+$grid-gutter-width:           2rem !default;
+
+// Typography
+$font-family-sans-serif:      "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+// Headings
+$headings-font-family:        'Open Sans', sans-serif;
+$headings-font-style:         null !default;
+$headings-font-weight:        300 !default;
+$headings-line-height:        1.2 !default;
+$headings-color:              $primary;
+
+// Nav pills
+$nav-pills-border-radius:     20px;
+$nav-pills-link-active-bg:    $secondary;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss"

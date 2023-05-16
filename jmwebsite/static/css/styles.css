@@ -1,0 +1,488 @@
+/* // Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { ... } */
+
+
+
+
+
+/* ---------------------------------------------------
+    BASE STYLES
+----------------------------------------------------- */
+
+body {
+    background-color: var(--bs-dark);
+}
+
+.main-area {
+    min-height: 100vh;
+    width: 100%;
+    background: var(--bs-dark) url(../img/bg_drone.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.main-overlay {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: #1B1B1B;
+    opacity: .85;
+    z-index: 0;
+}
+
+.bottom-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(0deg, rgba(27, 27, 27, 1) 0%, rgba(27, 27, 27, 0) 100%);
+}
+
+.main-area>section.content {
+    position: absolute;
+    width: 100%;
+    top: 8rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.box-shadow {
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.5);
+}
+
+.text-shadow {
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+p {
+    line-height: 1.65rem;
+    font-weight: 300;
+}
+
+.about-text>p:last-child {
+    margin-bottom: 4rem;
+}
+
+.content .skills h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.content ul li {
+    line-height: 2rem;
+    font-weight: 300;
+}
+
+.content ul {
+    list-style: none;
+}
+
+.content ul li::before {
+    content: "\f058";
+    font-family: "Font Awesome 6 Free";
+    color: var(--bs-secondary);
+    display: inline-block;
+    width: 1.9em;
+    margin-left: -2em;
+}
+
+.content ul.p-ul li::before {
+    content: "\f192";
+}
+
+.container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+hr {
+    color: rgba(255, 255, 255, .5);
+    margin: 4rem 0;
+    width: 100%;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.welcome.copyright {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    color: rgba(255, 255, 255, .5);
+    font-size: .85rem;
+    z-index: 1000;
+}
+
+/* ---------------------------------------------------
+    NAV STYLES
+----------------------------------------------------- */
+
+section.nav {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    z-index: 100;
+    width: calc(100vw - 2rem);
+}
+
+section.nav .navbar {
+    width: 100%;
+    z-index: 100;
+}
+
+section.nav .navbar-brand {
+    font-size: 3rem;
+    font-weight: 300;
+    transition: color .2s;
+    margin-right: 2rem;
+}
+
+section.nav .navbar-brand:hover {
+    color: var(--bs-primary);
+}
+
+.navbar .nav-link, section.nav .navbar .nav-link {
+    padding: .5rem 1.8rem;
+    color: rgba(255, 255, 255, .8);
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: color .2s;
+}
+
+.navbar .nav-link:hover {
+    color: var(--bs-secondary);
+}
+
+.nav-pills .nav-link.active {
+    border: 2px var(--bs-secondary) solid;
+    background: rgba(84, 188, 129, .2);
+    backdrop-filter: blur(4px);
+}
+
+section.welcome .navbar {
+    border-radius: 24px;
+    border: 2px var(--bs-secondary) solid;
+    background: rgba(84, 188, 129, .2);
+    backdrop-filter: blur(4px);
+}
+
+.navbar-toggler {
+    color: #ffffff;
+    border: 2px var(--bs-secondary) solid;
+    background: rgba(84, 188, 129, .2);
+    backdrop-filter: blur(4px);
+    line-height: unset;
+    border-radius: 50%;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 4px 4px rgba(84, 188, 129, .4);
+}
+
+.nav-gradient {
+    position: fixed;
+    top: -75%;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    background: linear-gradient(0deg, rgba(27, 27, 27, 0) 0%, rgba(27, 27, 27, .8) 50%, rgba(27, 27, 27, .9) 100%);
+    z-index: 0;
+    opacity: 0;
+    line-height: normal;
+    margin: 0 -1rem;
+}
+
+@media (min-width: 768px) {
+    section.welcome .navbar {
+        height: 48px;
+    }
+
+    section.welcome .navbar .nav-link {
+        padding: 0 1.4rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #mainNav {
+        transform: translateX(72px);
+    }
+
+    #mainNav .nav-link {
+        padding-right: 5rem;
+    }
+}
+
+/* ---------------------------------------------------
+    FOOTER STYLES
+----------------------------------------------------- */
+
+.footer {
+    margin-top: 2rem;
+    margin-bottom: .6rem;
+}
+
+.footer .copyright {
+    color: rgba(255, 255, 255, .5);
+    font-size: .85rem;
+}
+
+.footer .socials a {
+    padding-left: .4rem;
+    color: rgba(255, 255, 255, .5);
+}
+
+
+/* ---------------------------------------------------
+    HOMEPAGE STYLES
+----------------------------------------------------- */
+
+.welcome .main-overlay {
+    opacity: .5;
+}
+
+section.intro.welcome {
+    position: absolute;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.welcome h1 {
+    font-size: 3.6rem;
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.welcome .tagline {
+    color: var(--bs-primary);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.welcome .socials a {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, .6);
+    margin-top: 3rem;
+    padding: .4rem;
+    transition: color .2s
+}
+
+.socials a:hover {
+    color: #ffffff;
+}
+
+
+/* ---------------------------------------------------
+    ABOUT STYLES
+----------------------------------------------------- */
+
+.prof-photo-group {
+    position: relative;
+    width: 60%;
+}
+
+.prof-photo {
+    border-radius: 50%;
+    opacity: 1;
+    position: relative;
+}
+
+.prof-circle {
+    position: absolute;
+    width: 100%;
+    padding-bottom: 100%;
+    border-radius: 50%;
+}
+
+.prof-circle.primary {
+    transform: translate(-10%, -6%);
+    background-color: var(--bs-primary);
+}
+
+.prof-circle.secondary {
+    transform: translate(6%, 10%);
+    background-color: var(--bs-secondary);
+}
+
+.about h1 {
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.about .tagline {
+    color: var(--bs-primary);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.about h2 {
+    color: var(--bs-secondary);
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .prof-photo-group {
+        width: 100%;
+    }
+}
+
+
+
+/* ---------------------------------------------------
+    PORTFOLIO STYLES
+----------------------------------------------------- */
+
+.portfolio h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.icon-group {
+    position: relative;
+    width: 60%;
+    padding-bottom: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon-circle {
+    position: absolute;
+    width: 100%;
+    padding-bottom: 100%;
+    border-radius: 50%;
+}
+
+.icon-circle.primary {
+    background-color: var(--bs-primary);
+}
+
+.icon-circle.secondary {
+    transform: translate(2%, 12%);
+    background-color: var(--bs-secondary);
+}
+
+.portfolio .icon-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0px 4px 4px rgb(0 0 0 / 0.4));
+    color: #ffffff;
+    text-align: center;
+}
+
+.portfolio .tt-logo {
+    width: 60%;
+}
+
+.portfolio .fta-logo {
+    font-size: 4.52rem;
+    left: 54%;
+}
+
+.portfolio .coaching-logo {
+    font-size: 5.5rem;
+}
+
+.portfolio .ug-logo {
+    font-size: 4.5rem;
+    top: 45%;
+}
+
+@media (min-width: 768px) {
+    .icon-group {
+        width: 100%;
+        padding-bottom: 100%;
+    }
+}
+
+
+/* ---------------------------------------------------
+    RESUME STYLES
+----------------------------------------------------- */
+
+.resume-text h2 {
+    font-size: 2rem;
+    margin-top: 4rem;
+}
+
+.resume-text h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.resume-text h3 .badge {
+    font-size: .8rem;
+    margin-left: .8rem;
+}
+
+.resume-text ul li {
+    line-height: 1.65rem;
+    padding-bottom: .6rem;
+}
+
+.resume-text span.in-progress {
+    font-weight: 300;
+    margin-left: 2rem;
+    color: rgba(255, 255, 255, .6);
+}
+
+.resume .tagline {
+    color: var(--bs-primary);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+.resume h2 {
+    color: var(--bs-secondary);
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+}
+
+
+/* ---------------------------------------------------
+    CONTACT STYLES
+----------------------------------------------------- */
+
+section.content.contact .container {
+    min-height: 60vh;
+}
+
+.contact .btn-secondary {
+    padding: 1rem 2rem;
+    font-weight: 600;
+    color: #ffffff;
+    border: 2px var(--bs-secondary) solid;
+    background-color: rgba(84, 188, 129, .2);
+    backdrop-filter: blur(4px);
+    transition: background-color .2s;
+}
+
+.contact .btn-secondary:hover {
+    background-color: rgba(84, 188, 129, .6);
+}

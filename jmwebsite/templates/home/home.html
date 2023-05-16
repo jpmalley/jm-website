@@ -1,0 +1,50 @@
+{% extends "welcome.html" %}
+
+{% block extra_css %}
+
+{% endblock extra_css %}
+
+{% block content %}
+
+<section class="main welcome">
+    <div class="main-area">
+        <div class="main-overlay"></div>
+    </div>
+</section>
+<section class="intro welcome">
+    <div class="welcome text-center">
+        <h1 class="text-shadow">John Malley</h1>
+        <div class="tagline text-shadow">Software Engineer &amp; Manager</div>
+    </div>
+    <div class="text-center">
+        <nav class="navbar box-shadow" data-bs-theme="dark">
+            <div class="container-fluid">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'about' %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'resume' %}">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="socials d-flex justify-content-center text-shadow">
+            <a class="github" href="https://github.com/jpmalley"><i class="fa-brands fa-github"></i></a>
+            <a class="linkedin" href="https://www.linkedin.com/in/jpmalley/"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</section>
+<div class="copyright welcome"><small>&copy; 2023 John Malley</small></div>
+
+{% endblock content %}
+
+{% block extra_js %}
+
+{% endblock extra_js %}

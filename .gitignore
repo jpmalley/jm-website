@@ -1,0 +1,22 @@
+*.pyc
+.DS_STORE
+*.swp
+/venv/
+/static/
+/staticfiles/
+/media/
+.env
+setenv
+.env.tmp
+*.sqlite3
+/node_modules/
+package-lock.json
+package.json
+.vscode/
+/.venv/
+/.idea/
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

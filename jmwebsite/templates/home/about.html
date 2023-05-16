@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block extra_css %}
+
+{% endblock extra_css %}
+
+{% block content %}
+
+<section class="main">
+    <div class="main-area">
+        <div class="main-overlay"></div>
+        <div class="bottom-gradient"></div>
+        <section class="content about">
+            <div class="container">
+                <div class="row pb-5">
+                    <div class="col-md-3 pe-md-5 d-flex justify-content-center">
+                        <div class="prof-photo-group">
+                            <div class="prof-circle secondary box-shadow"></div>
+                            <div class="prof-circle primary box-shadow"></div>
+                            <img src="{% static 'img/jm_portrait.jpeg' %}" class="prof-photo img-fluid box-shadow" alt="">
+                            <h1>John Malley</h1>
+                            <div class="tagline">Software Engineer<br> &amp; Manager</div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="about-text text-white">
+                            <h2>Hi there 👋</h2>
+                            <p>I'm a software developer with a design background who can build a website from the
+                                ground up and make it look fantastic. In addition to a wealth of technical skills, I
+                                also pride myself on being a strong communicator who can break down complex topics
+                                without judgment or jargon.</p>
+                            <p>I spent the last 5 years as a developer, technical project manager, and technology
+                                department head at an e-commerce company that took in $60M per year in revenue.</p>
+                            <p>I live in Colorado Springs with my wife, two cats, and dog. When I'm not coding, you
+                                can find me designing my next 3D print, tinkering with old gaming consoles, and I
+                                also have an amateur interest in photography.</p>
+                            <div class="row skills">
+                                <div class="col-md-3">
+                                    <h3>Languages</h3>
+                                    <ul>
+                                        <li>Python</li>
+                                        <li>JavaScript</li>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>Sass</li>
+                                        <li>SQL</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3">
+                                    <h3>Frameworks</h3>
+                                    <ul>
+                                        <li>Django</li>
+                                        <li>Bootstrap</li>
+                                        <li>jQuery</li>
+                                        <li>GSAP</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <h3>Areas of Expertise</h3>
+                                    <ul>
+                                        <li>Web development</li>
+                                        <li>Software engineering</li>
+                                        <li>Project management</li>
+                                        <li>DevOps</li>
+                                        <li>E-commerce</li>
+                                        <li>ERP &amp; WMS</li>
+                                        <li>AWS cloud infrastructure</li>
+                                        <li>People management</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="footer">
+                <div class="container-fluid">
+                    <hr class="mt-0 mb-2">
+                </div>
+                <div class="container-fluid d-flex justify-content-between text-shadow">
+                    <div class="copyright"><small>&copy; 2023 John Malley</small></div>
+                    <div class="socials d-flex">
+                        <a class="github" href="https://github.com/jpmalley"><i class="fa-brands fa-github"></i></a>
+                        <a class="linkedin" href="https://www.linkedin.com/in/jpmalley/"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+</section>
+
+{% endblock content %}
+
+{% block extra_js %}
+
+{% endblock extra_js %}

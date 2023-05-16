@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block extra_css %}
+
+{% endblock extra_css %}
+
+{% block content %}
+
+<section class="main">
+    <div class="main-area">
+        <div class="main-overlay"></div>
+        <div class="bottom-gradient"></div>
+        <section class="content contact">
+            <div class="container d-flex justify-content-center align-items-center">
+                <a href="mailto:jpmalley@me.com?subject=Contact%20from%20johnpmalley.com" class="btn btn-secondary rounded-pill btn-lg">Email Me <i class="fa-solid fa-paper-plane ps-2"></i></a>
+            </div>
+            <section class="footer">
+                <div class="container-fluid">
+                    <hr class="mt-0 mb-2">
+                </div>
+                <div class="container-fluid d-flex justify-content-between text-shadow">
+                    <div class="copyright"><small>&copy; 2023 John Malley</small></div>
+                    <div class="socials d-flex">
+                        <a class="github" href="https://github.com/jpmalley"><i class="fa-brands fa-github"></i></a>
+                        <a class="linkedin" href="https://www.linkedin.com/in/jpmalley/"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+</section>
+
+{% endblock content %}
+
+{% block extra_js %}
+
+{% endblock extra_js %}
