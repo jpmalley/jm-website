@@ -169,7 +169,7 @@ AWS_SECRET_KEY = os.getenv("AWS_SECRET_KEY")
 AWS_BUCKET_NAME = os.getenv("AWS_BUCKET_NAME")
 AWS_REGION_NAME = os.getenv("AWS_REGION_NAME")
 
-AWS_QUERYSTRING_AUTH = False
+
 
 if 'RDS_DB_NAME' in os.environ:
     STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
@@ -180,3 +180,5 @@ if 'RDS_DB_NAME' in os.environ:
 
     AWS_S3_ACCESS_KEY_ID = AWS_ACCESS_KEY
     AWS_S3_SECRET_ACCESS_KEY = AWS_SECRET_KEY
+
+    AWS_QUERYSTRING_AUTH = False
