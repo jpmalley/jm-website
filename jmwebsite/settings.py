@@ -32,7 +32,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'home',
+    'filetransfer',
 
+    'widget_tweaks',
     'storages',
     'active_link',
 ]

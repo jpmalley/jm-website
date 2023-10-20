@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 
 from home.views import home, about, portfolio, resume, contact
+from filetransfer.views import filetransfer, success, presignUpload, presignDownload
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,4 +27,10 @@ urlpatterns = [
     path('portfolio/', portfolio, name="portfolio"),
     path('resume/', resume, name="resume"),
     path('contact/', contact, name="contact"),
+
+    # filetransfer views
+    path('filetransfer', filetransfer, name="filetransfer"),
+    path('success/', success, name="success"),
+    path('ajax/presign_upload/', presignUpload, name="presign_upload"),
+    path('ajax/presign_download/', presignDownload, name="presign_download")
 ]

@@ -1,0 +1,13 @@
+{% load  widget_tweaks %}
+
+<form id="uploadForm">
+    {% csrf_token %}
+    <label class="sr-only" for="{{ upload_form.file.id_for_label }}">First name</label>
+    <label class="sr-only" for="{{ upload_form.expiration.id_for_label }}">Last name</label>
+    <div id="uploadInputs" class="input-group input-group-lg">
+        {{ upload_form.file|add_class:"form-control form-control-lg w-50" }}
+        {{ upload_form.expiration|add_class:"form-select" }}
+        <button id="uploadButton" class="btn btn-secondary" type="button" disabled="disabled">Upload</button>
+    </div>
+    <div class="text-center">{{ form.errors }} </div>
+</form>

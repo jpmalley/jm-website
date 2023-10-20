@@ -1,0 +1,62 @@
+/* ---------------------------------------------------
+    BASE STYLES
+----------------------------------------------------- */
+
+
+/* ---------------------------------------------------
+    NAV STYLES
+----------------------------------------------------- */
+#main-nav {
+    min-height: 56px;
+}
+
+
+/* ---------------------------------------------------
+    HOMEPAGE STYLES
+----------------------------------------------------- */
+
+section.main {
+    min-height: calc(100vh - 112px);
+}
+
+section.main > .container {
+    height: calc(100vh - 112px);
+}
+
+.progress {
+    height: 3rem;
+}
+
+.progress strong {
+    font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+    #uploadFormContainer {
+        max-width: 80%;
+    }
+}
+
+
+/* ---------------------------------------------------
+    FOOTER STYLES
+----------------------------------------------------- */
+
+#copyButton {
+    min-width: 5.2rem;
+    font-weight: bold;
+}
+
+
+/* ---------------------------------------------------
+    FOOTER STYLES
+----------------------------------------------------- */
+
+section.footer .container {
+    height: 56px;
+}
+
+section.footer .copyright {
+    font-size: 0.7rem;
+    opacity: .8;
+}
