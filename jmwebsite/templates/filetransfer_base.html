@@ -34,9 +34,14 @@
 
 <body class="{% block body_class %}{% endblock %}">
     <nav id="main-nav" class="navbar navbar-expand-lg navbar-light bg-primary">
-        <a class="ms-3 navbar-brand text-light fw-semibold" href="/">
+        <a class="ms-3 navbar-brand text-light fw-semibold" href="{% url 'filetransfer' %}">
             <i class="fas fa-file-export text-info"></i> File Transfer App</a>
         </a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a id="back-to-portfolio" class="nav-link" href="{% url 'portfolio' %}"><i class="fa-regular fa-circle-left me-2"></i>Back to Porfolio</a>
+            </li>
+        </ul>
     </nav>
 
     {% if messages %}

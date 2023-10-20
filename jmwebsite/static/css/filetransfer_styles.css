@@ -30,6 +30,14 @@ section.main > .container {
 .progress strong {
     font-size: 1.2rem;
 }
+#back-to-portfolio {
+    transition: color .2s;
+    color: #ffffff;
+}
+
+#back-to-portfolio:hover {
+    color: rgba(255, 255, 255, .6);
+}
 
 @media (min-width: 768px) {
     #uploadFormContainer {
