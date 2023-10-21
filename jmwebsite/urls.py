@@ -17,15 +17,15 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path
 
-from home.views import home, about, portfolio, resume, contact
+from home.views import home, about, projects, experience, contact
 from filetransfer.views import filetransfer, success, presignUpload, presignDownload
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name="home"),
     path('about/', about, name="about"),
-    path('portfolio/', portfolio, name="portfolio"),
-    path('resume/', resume, name="resume"),
+    path('projects/', projects, name="projects"),
+    path('experience/', experience, name="experience"),
     path('contact/', contact, name="contact"),
 
     # filetransfer views

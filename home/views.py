@@ -13,17 +13,17 @@ def about(request):
     context["title"] = title
     return render(request, "home/about.html", context)
 
-def portfolio(request):
-    title = "Portfolio - John Malley"
+def projects(request):
+    title = "Projects - John Malley"
     context = {}
     context["title"] = title
-    return render(request, "home/portfolio.html", context)
+    return render(request, "home/projects.html", context)
 
-def resume(request):
-    title = "Resume - John Malley"
+def experience(request):
+    title = "Career Experience - John Malley"
     context = {}
     context["title"] = title
-    return render(request, "home/resume.html", context)
+    return render(request, "home/experience.html", context)
 
 def contact(request):
     title = "Contact - John Malley"
