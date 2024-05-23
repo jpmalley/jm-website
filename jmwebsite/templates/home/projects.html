@@ -28,19 +28,18 @@
                 <div class="tab-content" id="projectTabsContent">
                     <div class="tab-pane fade show active" id="design" role="tabpanel" aria-labelledby="design-tab">
                         <div class="grid-container">
-                            <div class="grid-01"><div class="grid-content"></div></div>
-                            <div class="grid-02"><div class="grid-content"></div></div>
-                            <div class="grid-03"><div class="grid-content"></div></div>
-                            <div class="grid-04"><div class="grid-content"></div></div>
-                            <div class="grid-05"><div class="grid-content"></div></div>
-                            <div class="grid-06"><div class="grid-content"></div></div>
-                            <div class="grid-07"><div class="grid-content"></div></div>
-                            <div class="grid-08"><div class="grid-content"></div></div>
-                            <div class="grid-09"><div class="grid-content"></div></div>
-                            <div class="grid-10"><div class="grid-content"></div></div>
+                            <div class="grid-01 box-shadow"><a href="#" data-bs-toggle="modal" data-bs-target="#insightsModal"><div class="grid-content"></div></a></div>
+                            <div class="grid-02 box-shadow"><a href="#" data-bs-toggle="modal" data-bs-target="#coffeeModal"><div class="grid-content"></div></a></div>
+                            <div class="grid-03 box-shadow"><a href="#" data-bs-toggle="modal" data-bs-target="#ableModal"><div class="grid-content"></div></a></div>
+                            <div class="grid-04 box-shadow"><a href="#" data-bs-toggle="modal" data-bs-target="#brewModal"><div class="grid-content"></div></a></div>
+                            <div class="grid-05 box-shadow"><a href="#" data-bs-toggle="modal" data-bs-target="#coastersModal"><div class="grid-content"></div></a></div>
+                            <div class="grid-06 box-shadow"><a href="#" data-bs-toggle="modal" data-bs-target="#travelModal"><div class="grid-content"></div></a></div>
+                            <div class="grid-07 box-shadow"><a href="#" data-bs-toggle="modal" data-bs-target="#recipeModal"><div class="grid-content"></div></a></div>
+                            <div class="grid-08 box-shadow"><a href="#" data-bs-toggle="modal" data-bs-target="college#Modal"><div class="grid-content"></div></a></div>
+                            <div class="grid-09 box-shadow"><a href="#" data-bs-toggle="modal" data-bs-target="#holidayModal"><div class="grid-content"></div></a></div>
+                            <div class="grid-10 box-shadow"><a href="#" data-bs-toggle="modal" data-bs-target="#waypointsModal"><div class="grid-content"></div></a></div>
                         </div>
                     </div>
-                    
                     
                     <div class="tab-pane fade" id="development" role="tabpanel" aria-labelledby="development-tab">
                         <div class="row mb-5">
@@ -324,6 +323,10 @@
     </div>
 </section>
 
+{% include "home/projects/insights.html" %}
+{% include "home/projects/coffee.html" %}
+
+
 {% endblock content %}
 
 {% block extra_js %}
@@ -360,5 +363,49 @@
     if (document.getElementById('design').classList.contains('show')) {
         animateBoxes();
     }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const grids = document.querySelectorAll('.grid-container > div');
+    
+        grids.forEach(grid => {
+            grid.addEventListener('mouseenter', () => {
+                gsap.to(grid, {
+                    scale: 1.01,
+                    duration: 0.5,
+                    ease: 'power2.out'
+                });
+            });
+    
+            grid.addEventListener('mouseleave', () => {
+                gsap.to(grid, {
+                    scale: 1,
+                    duration: 0.5,
+                    ease: 'power2.out'
+                });
+                gsap.to(grid, {
+                    x: 0,
+                    y: 0,
+                    duration: 0.5,
+                    ease: 'power2.out'
+                });
+            });
+    
+            grid.addEventListener('mousemove', (e) => {
+                const rect = grid.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const moveX = (x - rect.width / 2) / rect.width * 20;
+                const moveY = (y - rect.height / 2) / rect.height * 20;
+    
+                gsap.to(grid, {
+                    x: moveX,
+                    y: moveY,
+                    duration: 0.5,
+                    ease: 'power2.out'
+                });
+            });
+        });
+    });
+
 </script>
 {% endblock extra_js %}

@@ -113,5 +113,13 @@
 {% endblock content %}
 
 {% block extra_js %}
-
+<script>
+    gsap.from(".job, .cetifications, .education, .skills-attributes", {
+        y: "100%", // Start position off-screen
+        opacity: 0, // Start invisible
+        duration: 1, // Animation duration
+        stagger: 0.1, // Delay between each element's animation
+        ease: "power3.out" // Easing function
+    });
+</script>
 {% endblock extra_js %}

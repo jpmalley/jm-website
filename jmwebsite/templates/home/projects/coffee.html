@@ -1,0 +1,54 @@
+{% load static %}
+
+<div id="coffeeModal" class="modal fade" tabindex="-1" aria-hidden="true" data-bs-theme="dark">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="mb-0">Demitasse Coffee &amp; Creamery Packaging Design</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div id="coffeeCarousel" class="carousel slide mt-4">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#coffeeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#coffeeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#coffeeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#coffeeCarousel" data-bs-slide-to="3" aria-label="Slide 3"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                    <img src="{% static 'img/demitasse-1.jpg' %}" class="d-block" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src="{% static 'img/demitasse-2.jpg' %}" class="d-block" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src="{% static 'img/demitasse-3.jpg' %}" class="d-block" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                    <img src="{% static 'img/demitasse-4.jpg' %}" class="d-block" alt="...">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#coffeeCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#coffeeCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-12 text-white">
+                            <p class="my-4">For this college project, I created a cohesive packaging design for Demitasse Coffee &amp; Creamery. The goal was to develop a brand identity that exudes sophistication and simplicity while ensuring practical functionality. The design features a clean, modern aesthetic with a warm color palette, highlighting the brand's commitment to organic and premium quality products. The project includes coffee bean bags, to-go cups, and a reusable shopping bag, all unified by consistent branding elements and an elegant logo. This packaging solution not only enhances the visual appeal but also reinforces the brand's market presence and customer experience.</p>
+                            <button type="button" class="btn btn-outline-secondary rounded-pill" data-bs-dismiss="modal"><i class="fa-regular fa-circle-left"></i> Return to Projects</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
