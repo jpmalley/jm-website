@@ -444,11 +444,12 @@ section.intro.welcome {
 }
 
 .grid-container {
+    display: -webkit-box; /* Older versions of iOS Safari */
+    display: -ms-grid; /* IE11 / Edge Legacy */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 8px;
-    grid-row-gap: 8px;
+    grid-gap: 8px; /* Use shorthand for grid gaps */
 }
 
 .grid-container > div {
@@ -466,9 +467,11 @@ section.intro.welcome {
 
 .grid-container > div > a {
     display: block;
+    width: 100%;
+    height: 100%;
 }
 
-.grid-container .grid-content {
+.grid-container > div > a > .grid-content {
     position: absolute;
     top: 0;
     left: 0;
