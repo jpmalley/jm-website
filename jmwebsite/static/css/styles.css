@@ -564,6 +564,10 @@ section.intro.welcome {
     background-color: #000;
 }
 
+.modal-img {
+    border-radius: 24px;
+}
+
 @media (min-width: 768px) {
     .grid-container {
         grid-column-gap: 10px;
