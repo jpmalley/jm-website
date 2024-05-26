@@ -518,6 +518,25 @@
         }
     }
 
+    function removeHoverEffects() {
+        document.querySelectorAll('.grid-link').forEach(anchor => {
+            const badge = anchor.querySelector('.badge');
+            const text = badge.querySelector('.badge-text');
+
+            anchor.removeEventListener('mouseenter', () => {
+                gsap.to(badge, { width: "auto", borderRadius: "50px", duration: 0.3 });
+                gsap.to(text, { opacity: 1, x: "0%", duration: 0.3 });
+                badge.classList.add('expanded');
+            });
+
+            anchor.removeEventListener('mouseleave', () => {
+                gsap.to(badge, { width: "20px", height: "20px", borderRadius: "50%", duration: 0.3 });
+                gsap.to(text, { opacity: 0, x:"-100%", duration: 0.3 });
+                badge.classList.remove('expanded');
+            });
+        });
+    }
+
     // Initial call
     applyHoverEffects();
 
@@ -526,22 +545,7 @@
         if (window.innerWidth >= 992) {
             applyHoverEffects();
         } else {
-            document.querySelectorAll('.grid-link').forEach(anchor => {
-                const badge = anchor.querySelector('.badge');
-                const text = badge.querySelector('.badge-text');
-
-                anchor.removeEventListener('mouseenter', () => {
-                    gsap.to(badge, { width: "auto", borderRadius: "50px", duration: 0.3 });
-                    gsap.to(text, { opacity: 1, x: "0%", duration: 0.3 });
-                    badge.classList.add('expanded');
-                });
-
-                anchor.removeEventListener('mouseleave', () => {
-                    gsap.to(badge, { width: "20px", height: "20px", borderRadius: "50%", duration: 0.3 });
-                    gsap.to(text, { opacity: 0, x:"-100%", duration: 0.3 });
-                    badge.classList.remove('expanded');
-                });
-            });
+            removeHoverEffects();
         }
     });
 </script>

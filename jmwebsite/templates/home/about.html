@@ -33,7 +33,7 @@
                                     <h3>Areas of Expertise</h3>
                                 </div>
                                 <div class="col-md-6">
-                                    <ul>
+                                    <ul class="checks">
                                         <li>Strategic Planning &amp; Execution</li>
                                         <li>Full-Stack Web Development</li>
                                         <li>Quality Assurance Strategies</li>
@@ -43,7 +43,7 @@
                                     </ul>
                                 </div>
                                 <div class="col-md-6">
-                                    <ul>
+                                    <ul class="checks">
                                         <li>API Development &amp; Management</li>
                                         <li>Software Lifecycle Management</li>
                                         <li>Scalable Software Engineering</li>
@@ -103,5 +103,13 @@
 {% endblock content %}
 
 {% block extra_js %}
-
+<script>
+    gsap.from(".prof-photo-group, .about-text", {
+        y: "100%", // Start position off-screen
+        opacity: 0, // Start invisible
+        duration: 1, // Animation duration
+        stagger: 0.1, // Delay between each element's animation
+        ease: "power3.out" // Easing function
+    });
+</script>
 {% endblock extra_js %}
