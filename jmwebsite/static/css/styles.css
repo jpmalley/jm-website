@@ -127,6 +127,10 @@ hr {
     z-index: 1000;
 }
 
+section.content {
+    overflow: hidden;
+}
+
 /* ---------------------------------------------------
     NAV STYLES
 ----------------------------------------------------- */
@@ -297,6 +301,7 @@ section.intro.welcome {
 .prof-photo-group {
     position: relative;
     width: 60%;
+    margin-top: 6%;
 }
 
 .prof-photo {
@@ -449,7 +454,8 @@ section.intro.welcome {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    grid-gap: 8px; /* Use shorthand for grid gaps */
+    grid-gap: 8px;
+    margin-bottom: 4rem;
 }
 
 .grid-container > div {
@@ -477,8 +483,6 @@ section.intro.welcome {
     left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    white-space: nowrap;
 }
 
 .grid-01 { 
