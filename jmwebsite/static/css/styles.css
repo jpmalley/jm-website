@@ -477,6 +477,8 @@ section.intro.welcome {
     left: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .grid-01 { 
@@ -570,6 +572,7 @@ section.intro.welcome {
     position: absolute;
     bottom: 4px;
     left: 8px;
+    max-width: calc(100% - 16px);
 }
 
 .badges > .badge {
@@ -577,12 +580,18 @@ section.intro.welcome {
     border-radius: 50%;
     overflow: hidden;
     white-space: nowrap;
+    max-width: 100%;
+    text-overflow: ellipsis;
     transition: all 0.3s ease-in-out;
 }
 
 .badge .badge-text {
     transition: all 0.2s ease-in-out;
     display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    text-overflow: ellipsis;
 }
 
 .badge.expanded .badge-text {
