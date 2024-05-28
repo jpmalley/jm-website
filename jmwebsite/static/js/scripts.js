@@ -12,6 +12,6 @@ $("#mainNav").on("hide.bs.collapse", () => {
     gsap.to(".nav-gradient", {
         autoAlpha: 0,
         duration: .3,
-        top: "-75%",
+        top: "-100%",
     });
 });

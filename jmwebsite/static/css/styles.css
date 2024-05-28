@@ -33,7 +33,7 @@ body {
 }
 
 .main-overlay {
-    position: relative;
+    position: absolute;
     height: 100vh;
     width: 100%;
     background-color: #1B1B1B;
@@ -43,11 +43,9 @@ body {
 
 .bottom-gradient {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    height: 100vh;
     width: 100%;
-    height: 30%;
-    background: linear-gradient(0deg, rgba(27, 27, 27, 1) 0%, rgba(27, 27, 27, 0) 100%);
+    background: linear-gradient(0deg, rgba(27, 27, 27, 1) 0%, rgba(27, 27, 27, 0) 30%, rgba(27, 27, 27, 0) 100%);
 }
 
 .main-area>section.content {
@@ -114,6 +112,10 @@ hr {
     width: 100%;
 }
 
+strong {
+    font-weight: 600;
+}
+
 .no-scroll {
     overflow: hidden;
 }
@@ -148,11 +150,24 @@ section.nav .navbar {
     z-index: 100;
 }
 
+section.nav .navbar-group {
+    z-index: 102;
+}
+
 section.nav .navbar-brand {
     font-size: 3rem;
     font-weight: 300;
     transition: color .2s;
-    margin-right: 2rem;
+    margin-left: 1rem;
+    margin-right: 1.2rem;
+}
+
+section.nav h1.navbar-title {
+    color: var(--bs-secondary);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 0;
 }
 
 section.nav .navbar-brand:hover {
@@ -181,7 +196,8 @@ section.welcome .navbar {
     border-radius: 24px;
     border: 2px var(--bs-secondary) solid;
     background: rgba(84, 188, 129, .2);
-    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
 }
 
 .navbar-toggler {
@@ -191,23 +207,31 @@ section.welcome .navbar {
     backdrop-filter: blur(4px);
     line-height: unset;
     border-radius: 50%;
+    height: 45.5px;
+    width: 45.5px;
+    z-index: 110;
 }
 
 .navbar-toggler:focus {
     box-shadow: 0 0 4px 4px rgba(84, 188, 129, .4);
 }
 
+#mainNav {
+    z-index: 110;
+}
+
 .nav-gradient {
     position: fixed;
-    top: -75%;
-    left: 0;
+    top: -100%;
     width: 100%;
-    height: 75%;
+    height: 100%;
     background: linear-gradient(0deg, rgba(27, 27, 27, 0) 0%, rgba(27, 27, 27, .8) 50%, rgba(27, 27, 27, .9) 100%);
-    z-index: 0;
+    z-index: 104;
     opacity: 0;
     line-height: normal;
     margin: 0 -1rem;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
 }
 
 @media (min-width: 768px) {
@@ -587,6 +611,7 @@ section.intro.welcome {
     max-width: 100%;
     text-overflow: ellipsis;
     transition: all 0.3s ease-in-out;
+    line-height: 0.8;
 }
 
 .badge .badge-text {
@@ -609,6 +634,9 @@ section.intro.welcome {
     }
     .grid-container > div {
         border-radius: 18px;
+    }
+    .badges > .badge {
+        line-height: 1;
     }
 }
 

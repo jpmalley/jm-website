@@ -6,6 +6,8 @@
 
 {% endblock extra_css %}
 
+{% block mobile_title %}Experience{% endblock mobile_title %}
+
 {% block content %}
 
 <section class="main">
@@ -15,21 +17,15 @@
         <section class="content resume">
             <div class="container">
                 <div class="row">
-                    <!-- <div class="col-md-3 pe-md-5 d-flex justify-content-center">
-                        <div class="prof-photo-group">
-                            <div class="prof-circle secondary box-shadow"></div>
-                            <div class="prof-circle primary box-shadow"></div>
-                            <img src="/img/jm_portrait.jpeg" class="prof-photo img-fluid box-shadow" alt="">
-                            <h1>John Malley</h1>
-                            <div class="tagline">Software Engineer<br> & Manager</div>
-                        </div>
-                    </div> -->
                     <div class="col-md-12">
                         <div class="resume-text text-white">
                             <div class="experience">
-                                <h2>Career Experience</h2>
-                                <div class="job"> 
-                                    <h3>Web Development &amp; IT Manager, TeeTurtle <span class="badge rounded-pill bg-secondary">FEB 2021 - OCT 2022</span></h3>
+                                <div class="job mb-5"> 
+                                    <div class="d-md-flex align-items-center justify-content-between my-3">
+                                        <h3 class="mb-md-0">Web Development &amp; IT Manager, TeeTurtle</h3>
+                                        <div class="d-none d-md-block flex-grow-1 mx-3"><hr class="m-0"></div>
+                                        <span class="badge rounded-pill bg-secondary">FEB 2021 - OCT 2022</span>
+                                    </div>
                                     <p>Developed and oversaw custom e-commerce platforms and POS iOS applications. Maintained APIs, EDI connections, and system integrations, ensuring data integrity across platforms. Implemented and documented processes with automation to enhance inter-departmental efficiency. Managed AWS IAM account access, instances, and databases for varied applications.</p>
                                     <ul class="checks">
                                         <li>Reduced data integrity errors between ERP and e-commerce platforms, ensuring accuracy across over 15K SKUs.</li>
@@ -39,8 +35,12 @@
                                         <li>Executed a Mobile Device Manager, streamlining device management and automated patch deployment remotely.</li>
                                     </ul>
                                 </div>
-                                <div class="job"> 
-                                    <h3>Web Developer &amp; Technical Project Manager, TeeTurtle <span class="badge rounded-pill bg-secondary">MAR 2018 - FEB 2021</span></h3>
+                                <div class="job mb-5">
+                                    <div class="d-md-flex align-items-center justify-content-between my-3">
+                                        <h3 class="mb-md-0">Web Developer &amp; Technical Project Manager, TeeTurtle</h3>
+                                        <div class="d-none d-md-block flex-grow-1 mx-3"><hr class="m-0"></div>
+                                        <span class="badge rounded-pill bg-secondary">MAR 2018 - FEB 2021</span>
+                                    </div>
                                     <p>Gathered new e-commerce platform specifications and created summaries for stakeholder approval. Developed workable prototypes using Adobe XD/Figma to preview new features before development. Designed a custom front-end theme using the Bootstrap framework (Sass) and JQuery-powered UI. Coded HTML, CSS, and JS for the entire front-end experience of websites, including TeeTurtle.com and UnstableGames.com.</p>
                                     <ul class="checks">
                                         <li>Decreased 60% of reported fraud incidences and chargebacks by executing fraud detection filters for all credit card transactions.</li>
@@ -49,8 +49,12 @@
                                         <li>Implemented GDPR and CCPA compliance for e-commerce websites, ensuring legal adherence.</li>
                                     </ul>
                                 </div>
-                                <div class="job"> 
-                                    <h3>Email Designer/Developer, EllieMae <span class="badge rounded-pill bg-secondary">MAR 2017 - JAN 2018</span></h3>
+                                <div class="job mb-5">
+                                    <div class="d-md-flex align-items-center justify-content-between my-3">
+                                        <h3 class="mb-md-0">Email Designer/Developer, EllieMae</h3>
+                                        <div class="d-none d-md-block flex-grow-1 mx-3"><hr class="m-0"></div>
+                                        <span class="badge rounded-pill bg-secondary">MAR 2017 - JAN 2018</span>
+                                    </div>
                                     <p>Designed and developed marketing and client communication emails for a CRM platform. Coded emails employing top-notch HTML and CSS techniques and hacks. Managed templates, content, and email sends through Salesforce Marketing Cloud.</p>
                                     <ul class="checks">
                                         <li>Enhanced development efficiency by creating reusable email templates, elevating production from 5 to 15 emails per week.</li>
@@ -58,8 +62,12 @@
                                         <li>Boosted click-through rate by 10% by ensuring email client compatibility through meticulous testing.</li>
                                     </ul>
                                 </div>
-                                <div class="job"> 
-                                    <h3>Graphic Designer, The Growth Partnership <span class="badge rounded-pill bg-secondary">MAR 2017 - JAN 2018</span></h3>
+                                <div class="job mb-5">
+                                    <div class="d-md-flex align-items-center justify-content-between my-3">
+                                        <h3 class="mb-md-0">Graphic Designer, The Growth Partnership</h3>
+                                        <div class="d-none d-md-block flex-grow-1 mx-3"><hr class="m-0"></div>
+                                        <span class="badge rounded-pill bg-secondary">SEP 2013 - MAR 2017</span>
+                                    </div>
                                     <ul class="checks">
                                         <li>Designed print brochures, ads, posters, signage, booklets and digital assets for clients in the financial industry</li>
                                         <li>Managed third party vendor relationships with printers both locally and remotely</li>
@@ -70,13 +78,13 @@
                             </div>
                             <div class="certifications">
                                 <h2>Certifications</h2>
-                                <h3>Certified Scrum Master</h3>
-                                <h3>Certified Scrum Product Owner</h3>
+                                <p class="mb-1"><strong>Certified Scrum Master &reg;</strong> <em>by The Scrum Alliance</em></p>
+                                <p><strong>Certified Scrum Product Owner &reg;</strong> <em>by The Scrum Alliance</em></p>
                             </div>
                             <div class="education">
                                 <h2>Education</h2>
                                 <div>
-                                    <p>Bachelor of Arts, Graphic Design<br> University of Missouri - Columbia</p>
+                                    <p><strong>Bachelor of Arts, Graphic Design</strong><br> University of Missouri - Columbia</p>
                                 </div>
                             </div>
                             <div class="skills-attributes">
@@ -100,7 +108,7 @@
                     <hr class="mt-0 mb-2">
                 </div>
                 <div class="container-fluid d-flex justify-content-between text-shadow">
-                    <div class="copyright"><small>&copy; 2023 John Malley</small></div>
+                    <div class="copyright"><small>&copy; 2024 John Malley</small></div>
                     <div class="socials d-flex">
                         <a class="github" href="https://github.com/jpmalley"><i class="fa-brands fa-github"></i></a>
                         <a class="linkedin" href="https://www.linkedin.com/in/jpmalley/"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -115,7 +123,7 @@
 
 {% block extra_js %}
 <script>
-    gsap.from(".job, .cetifications, .education, .skills-attributes", {
+    gsap.from(".job, .certifications, .education, .skills-attributes", {
         y: "100%", // Start position off-screen
         opacity: 0, // Start invisible
         duration: 1, // Animation duration

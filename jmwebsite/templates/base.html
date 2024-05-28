@@ -27,30 +27,33 @@
 
 <body class="{% block body_class %}{% endblock %}">
     <section class="nav">
-        <div class="nav-gradient"></div>
         <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/">JM</a>
+            <div class="d-flex align-items-center justify-content-between w-100">
+                <div class="navbar-group d-flex align-items-center">
+                    <a class="navbar-brand" href="/">JM</a>
+                    <h1 class="navbar-title d-lg-none">{% block mobile_title %}{% endblock mobile_title %}</h1>
+                </div>
+                <div class="nav-gradient"></div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
                     aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa-solid fa-bars"></i>
                 </button>
-                <div id="mainNav" class="navbar-collapse collapse justify-content-md-start text-end">
-                    <ul class="navbar-nav nav-pills mb-2 mb-lg-0 float-end">
-                        <li class="nav-item">
-                            <a class="nav-link {% active_link 'about' 'active' %}" href="{% url 'about' %}">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% active_link 'projects' 'active' %}" href="{% url 'projects' %}">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% active_link 'experience' 'active' %}" href="{% url 'experience' %}">Experience</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% active_link 'contact' 'active' %}" href="{% url 'contact' %}">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+            </div>
+            <div id="mainNav" class="navbar-collapse collapse justify-content-md-start text-end">
+                <ul class="navbar-nav nav-pills mb-2 mb-lg-0 float-end">
+                    <li class="nav-item">
+                        <a class="nav-link {% active_link 'about' 'active' %}" href="{% url 'about' %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% active_link 'projects' 'active' %}" href="{% url 'projects' %}">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% active_link 'experience' 'active' %}" href="{% url 'experience' %}">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% active_link 'contact' 'active' %}" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </section>
