@@ -23,7 +23,7 @@
                             <div class="prof-circle primary box-shadow"></div>
                             <img src="{% static 'img/jm_portrait.jpeg' %}" class="prof-photo img-fluid box-shadow" alt="">
                             <h1>John Malley</h1>
-                            <div class="title">Software Engineer<br> &amp; Manager</div>
+                            <div class="title">Skilled Designer<br>&nbsp;&amp; Software Engineer</div>
                         </div>
                     </div>
                     <div class="col-md-9">
@@ -103,11 +103,11 @@
 {% block extra_js %}
 <script>
     gsap.from(".prof-photo-group, .about-text", {
-        y: "100%", // Start position off-screen
-        opacity: 0, // Start invisible
-        duration: 1, // Animation duration
-        stagger: 0.1, // Delay between each element's animation
-        ease: "power3.out" // Easing function
+        y: "100%",
+        autoAlpha: 0,
+        duration: 1,
+        stagger: 0.1,
+        ease: "power3.out"
     });
 </script>
 {% endblock extra_js %}

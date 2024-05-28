@@ -51,9 +51,7 @@ body {
 .main-area>section.content {
     position: absolute;
     width: 100%;
-    top: 8rem;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 8rem;
 }
 
 .box-shadow {
@@ -65,7 +63,7 @@ body {
 }
 
 p {
-    line-height: 1.65rem;
+    line-height: 1.8rem;
     font-weight: 300;
 }
 
@@ -80,7 +78,7 @@ p {
 }
 
 .content ul.checks li {
-    line-height: 2rem;
+    line-height: 1.8rem;
     font-weight: 300;
 }
 
@@ -234,7 +232,7 @@ section.welcome .navbar {
     backdrop-filter: blur(4px);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     section.welcome .navbar {
         height: 48px;
     }
@@ -244,7 +242,7 @@ section.welcome .navbar {
     }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
     #mainNav {
         transform: translateX(72px);
     }

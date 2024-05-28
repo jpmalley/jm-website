@@ -79,7 +79,7 @@
                                     <div class="d-md-flex align-items-center justify-content-between my-3">
                                         <h3 class="mb-md-0">Graphic Design Internship, McCord Design Group</h3>
                                         <div class="d-none d-md-block flex-grow-1 mx-3"><hr class="m-0"></div>
-                                        <span class="badge rounded-pill bg-secondary">JUN 2013 - August 2013</span>
+                                        <span class="badge rounded-pill bg-secondary">JUN 2013 - AUG 2013</span>
                                     </div>
                                     <ul class="checks">
                                         <li>Contributed to a team creating graphic materials for nationwide clients like Purina Mills and Footwear Unlimited</li>
@@ -89,7 +89,7 @@
                                 </div>
                                 <div class="job mb-5">
                                     <div class="d-md-flex align-items-center justify-content-between my-3">
-                                        <h3 class="mb-md-0">Graphic Designer, University of Missouri &mdash; SAS Marketing</h3>
+                                        <h3 class="mb-md-0">Graphic Designer, University of Missouri &ndash; SAS Marketing</h3>
                                         <div class="d-none d-md-block flex-grow-1 mx-3"><hr class="m-0"></div>
                                         <span class="badge rounded-pill bg-secondary">SEP 2011 - JUN 2013</span>
                                     </div>
@@ -108,7 +108,7 @@
                             <div class="education">
                                 <h2>Education</h2>
                                 <div>
-                                    <p><strong>Bachelor of Arts, Graphic Design</strong><br> University of Missouri - Columbia</p>
+                                    <p><strong>Bachelor of Arts, Graphic Design</strong><br> University of Missouri &ndash; Columbia</p>
                                 </div>
                             </div>
                             <div class="skills-attributes">
@@ -116,11 +116,10 @@
                                 <ul class="checks">
                                     <li>Advanced knowledge of HTML5, CSS3, JavaScript, jQuery, Python, Django, and SQL</li>
                                     <li>Advanced knowledge of AWS Cloud architecture including, EC2, RDS, S3, VPCs, ELBs, IAM and serverless offerings</li>
-                                    <li>Effective manager that prioritizes open communication, empathy, and trust</li>
-                                    <li>Former Certified ScrumMaster and Certified Scrum Product Owner by the Scrum Alliance</li>
-                                    <li>Experience managing multiple projects with competing deadlines and implementing effective project management processes on the Trello platform with automations on the Zapier platform</li>
-                                    <li>Experience managing remote employees across many different time zones, including international teams</li>
                                     <li>Advanced knowledge of Adobe Creative Cloud programs</li>
+                                    <li>Experienced managing remote employees across many different time zones, including international teams</li>
+                                    <li>Effective manager that prioritizes open communication, empathy, and trust</li>
+                                    <li>Experienced managing multiple projects with competing deadlines and implementing effective project management processes on the Trello platform</li>
                                 </ul>
                             </div>
                         </div>
@@ -148,11 +147,11 @@
 {% block extra_js %}
 <script>
     gsap.from(".job, .certifications, .education, .skills-attributes", {
-        y: "100%", // Start position off-screen
-        opacity: 0, // Start invisible
-        duration: 1, // Animation duration
-        stagger: 0.1, // Delay between each element's animation
-        ease: "power3.out" // Easing function
+        y: "100%",
+        autoAlpha: 0,
+        duration: 1,
+        stagger: 0.1,
+        ease: "power3.out"
     });
 </script>
 {% endblock extra_js %}

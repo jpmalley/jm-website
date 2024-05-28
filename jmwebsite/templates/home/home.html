@@ -48,11 +48,11 @@
 {% block extra_js %}
 <script>
     gsap.from(".welcome > h1, .tagline, .navbar, .socials", {
-        y: "100%", // Start position off-screen
-        opacity: 0, // Start invisible
-        duration: 1, // Animation duration
-        stagger: 0.1, // Delay between each element's animation
-        ease: "power3.out" // Easing function
+        y: "100%",
+        autoAlpha: 0,
+        duration: 1,
+        stagger: 0.1,
+        ease: "power3.out"
     });
 </script>
 {% endblock extra_js %}

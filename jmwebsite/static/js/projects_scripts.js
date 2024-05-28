@@ -1,20 +1,19 @@
- // Function to run GSAP animation
  function animateBoxes() {
     gsap.from(".grid-container > div", {
-        y: "100%", // Start position off-screen
-        opacity: 0, // Start invisible
-        duration: 1, // Animation duration
-        stagger: 0.1, // Delay between each element's animation
-        ease: "power3.out" // Easing function
+        y: "100%", 
+        autoAlpha: 0, 
+        duration: 1, 
+        stagger: 0.1, 
+        ease: "power3.out" 
     });
 }
 function animateRows() {
     gsap.from("#development .row", {
-        y: "100%", // Start position off-screen
-        opacity: 0, // Start invisible
-        duration: 1, // Animation duration
-        stagger: 0.1, // Delay between each element's animation
-        ease: "power3.out" // Easing function
+        y: "100%", 
+        autoAlpha: 0, 
+        duration: 1, 
+        stagger: 0.1, 
+        ease: "power3.out" 
     });
 }
 
