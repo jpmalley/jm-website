@@ -1,0 +1,289 @@
+{% load static %}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card box-shadow">
+            <div class="card-body">
+                <div class="d-flex">
+                    <div class="">
+                        <div class="icon-group">
+                            <div class="icon-circle secondary box-shadow"></div>
+                            <div class="icon-circle primary box-shadow"></div>
+                            <img src="{% static 'img/tt-logo-white.svg' %}" alt="" class="tt-logo icon-logo img-fluid">
+                        </div>
+                    </div>
+                    <div class="flex-grow-1">
+                        <div class="card-content d-flex flex-column flex-lg-row align-items-lg-center justify-content-between h-100">
+                            <h2 class="m-0">TeeTurtle.com Frontend</h2>
+                            <div class="button-row mt-3 mt-lg-0">
+                                <a href="https://www.teeturtle.com/" class="btn btn-sm btn-outline-secondary rounded-pill">View Live <i
+                                    class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
+                                <a href="https://github.com/jpmalley/TeeTurtle-frontend" class="btn btn-sm btn-outline-secondary rounded-pill">Source Code <i
+                                    class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
+                                <a class="btn btn-sm btn-secondary rounded-pill" data-bs-toggle="collapse" href="#turtleCollapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="turtleCollapse" class="collapse read-more mx-md-4 mx-2 mt-4">
+                    <p>At the time, TeeTurtle's entire $10M e-commerce business was hosted on a bog-standard
+                        $200 per month Shopify Premium plan. It was sluggish, outdated, and exceedingly
+                        restrictive to the business's growth. With the help of a 3rd party project manager
+                        and backend developer we duplicated all necessary functionality on our own custom
+                        PHP platform, all within eight months. This allowed us to tailor the platform to the
+                        specific needs of the business. I was responsible for spec gathering, developer
+                        write-ups, stakeholder management, and, most of all, frontend design and development
+                        of the entire look and feel of the new site. By 2021, we crossed more than $20M in
+                        e-commerce sales, in part due to the speed and efficiency of the new platform that
+                        allowed us to easily accommodate the massive increase in online sales during the
+                        early months of the pandemic.</p>
+                    <p>The current TeeTurtle.com is still using the same design and interface which I
+                        created in 2019 (with some cosmetic updates in 2021, also coded by me).</p>
+                    <div class="row skills">
+                        <div class="col-md-3">
+                            <h3>Languages</h3>
+                            <ul class="checks">
+                                <li>JavaScript</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Sass</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h3>Frameworks</h3>
+                            <ul class="checks">
+                                <li>Bootstrap</li>
+                                <li>jQuery</li>
+                                <li>GSAP</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card box-shadow mt-4">
+            <div class="card-body">
+                <div class="d-flex">
+                    <div class="">
+                        <div class="icon-group">
+                            <div class="icon-circle secondary box-shadow"></div>
+                            <div class="icon-circle primary box-shadow"></div>
+                            <div class="fta-logo icon-logo">
+                                <i class="fa-solid fa-file-export"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-grow-1">
+                        <div class="card-content d-flex flex-column flex-lg-row align-items-lg-center justify-content-between h-100">
+                            <h2 class="m-0">File Transfer App</h2>
+                            <div class="button-row mt-3 mt-lg-0">
+                                <a href="{% url 'filetransfer' %}" class="btn btn-sm btn-outline-secondary rounded-pill">View Live <i
+                                    class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
+                                <a href="https://github.com/jpmalley/filetransferapp" class="btn btn-sm btn-outline-secondary rounded-pill">Source Code <i
+                                    class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
+                                <a class="btn btn-sm btn-secondary rounded-pill" data-bs-toggle="collapse" href="#fileCollapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="fileCollapse" class="collapse read-more mx-md-4 mx-2 mt-4">
+                    <p>This simple Django app uploads a file securely to Amazon S3 and generates an easily
+                        sharable presigned URL with user specified expiration. Upon clicking upload, an AJAX
+                        request is sent to the server to generate presigned post URL with specific
+                        conditions to the file being uploaded. The request returns a post URL and the
+                        client's browser then handles the upload directly to S3 via JavaScript, avoiding
+                        additional server-side load. After a successful upload, the server generates a
+                        presigned download URL that expires at the specified time. Object lifecycles in the
+                        S3 bucket are managed to ensure objects are deleted permanently within 24 hours of
+                        link expiration. HTTP/1.1 Caching is also managed to ensure expiration coincides
+                        with link expiration.</p>
+                    <div class="row skills">
+                        <div class="col-md-3">
+                            <h3>Languages</h3>
+                            <ul class="checks">
+                                <li>Python</li>
+                                <li>JavaScript</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Sass</li>
+                                <li>SQL</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h3>Frameworks</h3>
+                            <ul class="checks">
+                                <li>Django</li>
+                                <li>Bootstrap</li>
+                                <li>jQuery</li>
+                                <li>GSAP</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h3>Infrastructure</h3>
+                            <ul class="checks">
+                                <li>AWS ElasticBeanstalk</li>
+                                <li>EC2</li>
+                                <li>RDS</li>
+                                <li>S3</li>
+                                <li>ELB</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card box-shadow mt-4">
+            <div class="card-body">
+                <div class="d-flex">
+                    <div class="">
+                        <div class="icon-group">
+                            <div class="icon-circle secondary box-shadow"></div>
+                            <div class="icon-circle primary box-shadow"></div>
+                            <div class="coaching-logo icon-logo">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-grow-1">
+                        <div class="card-content d-flex flex-column flex-lg-row align-items-lg-center justify-content-between h-100">
+                            <h2 class="m-0">Coaching Website &amp; Marketing Platform</h2>
+                            <div class="button-row mt-3 mt-lg-0 flex-column flex-sm-row">
+                                <a href="https://github.com/jpmalley/at-public" class="btn btn-sm btn-outline-secondary rounded-pill">Source Code <i
+                                    class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
+                                <a class="btn btn-sm btn-secondary rounded-pill" data-bs-toggle="collapse" href="#coachCollapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="coachCollapse" class="collapse read-more mx-md-4 mx-2 mt-4">
+                    <p>A coaching professional needed a platform to tell people about themselves, market
+                        their offerings, take payments, provide access to content behind a paywall and
+                        blog. I created this Django app using Wagtail CMS so that all of this could be
+                        done in one place. The app integrates with MailChimp Marketing and PayPal APIs
+                        to automate list building and taking payments. Everything on the site is
+                        configurable by the end user without any need for code. Clients can create
+                        accounts, pay and access exclusive content that free users cannot access.
+                        Initially hosted on Heroku, I switched hosting to AWS with only minutes of
+                        downtime.</p>
+                    <div class="row skills">
+                        <div class="col-md-3">
+                            <h3>Languages</h3>
+                            <ul class="checks">
+                                <li>Python</li>
+                                <li>JavaScript</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Sass</li>
+                                <li>SQL</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h3>Frameworks</h3>
+                            <ul class="checks">
+                                <li>Django</li>
+                                <li>Bootstrap</li>
+                                <li>jQuery</li>
+                                <li>GSAP</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h3>Infrastructure</h3>
+                            <ul class="checks">
+                                <li>AWS ElasticBeanstalk</li>
+                                <li>EC2</li>
+                                <li>RDS</li>
+                                <li>S3</li>
+                                <li>ELB</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card box-shadow mt-4">
+            <div class="card-body">
+                <div class="d-flex">
+                    <div class="">
+                        <div class="icon-group">
+                            <div class="icon-circle secondary box-shadow"></div>
+                            <div class="icon-circle primary box-shadow"></div>
+                            <div class="icon-logo ug-logo">
+                                <i class="fa-solid fa-chess"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-grow-1">
+                        <div class="card-content d-flex flex-column flex-lg-row align-items-lg-center justify-content-between h-100">
+                            <h2 class="m-0">Unstable Games Landing Pages</h2>
+                            <div class="button-row mt-3 mt-lg-0">
+                                <a href="https://github.com/jpmalley/hts-landing-page" class="btn btn-sm btn-outline-secondary rounded-pill">Source Code <i
+                                    class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
+                                <a class="btn btn-sm btn-secondary rounded-pill" data-bs-toggle="collapse" href="#unstableCollapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="unstableCollapse" class="collapse read-more mx-md-4 mx-2 mt-4">
+                    <p>TeeTurtle needed a striking landing page design for all of their major
+                        releases under the Unstable Games brand. These pages would serve multiple
+                        purposes throughout a title's development. Some of those functions included:
+                    </p>
+                    <ul class="p-ul checks">
+                        <li>Teaser page before Kickstarters</li>
+                        <li>Definitive source of product information during Kickstarters</li>
+                        <li>Preorder page and source of updates on shipping timelines</li>
+                        <li>And finally, a static sales page that introduces people to the game who
+                            have never seen it before</li>
+                    </ul>
+                    <p>I was given a blank canvas and decided to delve into javascript animations
+                        using the GSAP framework. With the help of the art team, we were able to
+                        convert already-produced animation assets to scroll-triggered web
+                        animations. It was easy to create a workflow into the product development
+                        cycle that made creating these animations took only a few minutes for each
+                        title.</p>
+                    <div class="row skills">
+                        <div class="col-md-3">
+                            <h3>Languages</h3>
+                            <ul class="checks">
+                                <li>JavaScript</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h3>Frameworks</h3>
+                            <ul class="checks">
+                                <li>Bootstrap</li>
+                                <li>jQuery</li>
+                                <li>GSAP</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -125,3 +125,20 @@ window.addEventListener('resize', () => {
         removeHoverEffects();
     }
 });
+
+
+function getScrollbarWidth() {
+    const scrollDiv = document.createElement('div');
+    scrollDiv.style.visibility = 'hidden';
+    scrollDiv.style.overflow = 'scroll';
+    document.body.appendChild(scrollDiv);
+
+    const innerDiv = document.createElement('div');
+    scrollDiv.appendChild(innerDiv);
+
+    const scrollbarWidth = scrollDiv.offsetWidth - innerDiv.offsetWidth;
+
+    document.body.removeChild(scrollDiv);
+
+    return scrollbarWidth;
+}
