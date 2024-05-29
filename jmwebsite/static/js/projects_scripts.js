@@ -1,5 +1,5 @@
- function animateBoxes() {
-    gsap.from(".grid-container > div", {
+function animateBoxes() {
+    gsap.from(".grid-container > div, .tab-footer", {
         y: "100%", 
         autoAlpha: 0, 
         duration: 1, 
@@ -8,7 +8,7 @@
     });
 }
 function animateRows() {
-    gsap.from("#development .row", {
+    gsap.from("#development .row, .tab-footer", {
         y: "100%", 
         autoAlpha: 0, 
         duration: 1, 
@@ -126,19 +126,27 @@ window.addEventListener('resize', () => {
     }
 });
 
+$(document).ready(function() {
+    $(".read-more").on("show.bs.collapse", function(event) {
+        const chevron = $(event.target).prev().find(".fa-chevron-down").get(0);
+        const title = $(event.target).prev().find("h2");
+        title.addClass("active");
+        gsap.to(chevron, { rotate: -180, duration: 0.3 });
+    });
 
-function getScrollbarWidth() {
-    const scrollDiv = document.createElement('div');
-    scrollDiv.style.visibility = 'hidden';
-    scrollDiv.style.overflow = 'scroll';
-    document.body.appendChild(scrollDiv);
+    $(".read-more").on("hide.bs.collapse", function(event) {
+        const chevron = $(event.target).prev().find(".fa-chevron-down").get(0);
+        const title = $(event.target).prev().find("h2");
+        title.removeClass("active");
+        gsap.to(chevron, { rotate: 0, duration: 0.3 });
+    });
+});
 
-    const innerDiv = document.createElement('div');
-    scrollDiv.appendChild(innerDiv);
-
-    const scrollbarWidth = scrollDiv.offsetWidth - innerDiv.offsetWidth;
-
-    document.body.removeChild(scrollDiv);
-
-    return scrollbarWidth;
-}
+$(document).ready(function() {
+    $(".switch-tab-dev").on("click", function() {
+        $('#development-tab').tab('show');
+    });
+    $(".switch-tab-design").on("click", function() {
+        $('#design-tab').tab('show');
+    });
+});

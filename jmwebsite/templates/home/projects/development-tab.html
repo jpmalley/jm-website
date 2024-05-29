@@ -5,23 +5,24 @@
         <div class="card box-shadow">
             <div class="card-body">
                 <div class="d-flex">
-                    <div class="">
+                    <a data-bs-toggle="collapse" href="#turtleCollapse">
                         <div class="icon-group">
                             <div class="icon-circle secondary box-shadow"></div>
                             <div class="icon-circle primary box-shadow"></div>
                             <img src="{% static 'img/tt-logo-white.svg' %}" alt="" class="tt-logo icon-logo img-fluid">
                         </div>
-                    </div>
+                    </a>
                     <div class="flex-grow-1">
                         <div class="card-content d-flex flex-column flex-lg-row align-items-lg-center justify-content-between h-100">
-                            <h2 class="m-0">TeeTurtle.com Frontend</h2>
+                            <a data-bs-toggle="collapse" href="#turtleCollapse">
+                                <h2 class="m-0">TeeTurtle E-commerce Platform</h2>
+                            </a>
                             <div class="button-row mt-3 mt-lg-0">
-                                <a href="https://www.teeturtle.com/" class="btn btn-sm btn-outline-secondary rounded-pill">View Live <i
-                                    class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
-                                <a href="https://github.com/jpmalley/TeeTurtle-frontend" class="btn btn-sm btn-outline-secondary rounded-pill">Source Code <i
-                                    class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
-                                <a class="btn btn-sm btn-secondary rounded-pill" data-bs-toggle="collapse" href="#turtleCollapse" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                    Read More
+                                <a href="https://github.com/jpmalley/TeeTurtle-frontend" class="btn btn-sm btn-outline-secondary rounded-pill" target="_blank" rel="noopener noreferrer">
+                                    Source Code <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+                                </a>
+                                <a class="btn btn-sm btn-secondary rounded-pill" data-bs-toggle="collapse" href="#turtleCollapse" role="button" aria-expanded="false">
+                                    Read More <i class="fa-solid fa-chevron-down ms-1"></i>
                                 </a>
                             </div>
                         </div>
@@ -71,7 +72,7 @@
         <div class="card box-shadow mt-4">
             <div class="card-body">
                 <div class="d-flex">
-                    <div class="">
+                    <a data-bs-toggle="collapse" href="#fileCollapse">
                         <div class="icon-group">
                             <div class="icon-circle secondary box-shadow"></div>
                             <div class="icon-circle primary box-shadow"></div>
@@ -79,17 +80,17 @@
                                 <i class="fa-solid fa-file-export"></i>
                             </div>
                         </div>
-                    </div>
+                    </a>
                     <div class="flex-grow-1">
                         <div class="card-content d-flex flex-column flex-lg-row align-items-lg-center justify-content-between h-100">
-                            <h2 class="m-0">File Transfer App</h2>
+                            <a data-bs-toggle="collapse" href="#fileCollapse">
+                                <h2 class="m-0">File Transfer App</h2>
+                            </a>
                             <div class="button-row mt-3 mt-lg-0">
-                                <a href="{% url 'filetransfer' %}" class="btn btn-sm btn-outline-secondary rounded-pill">View Live <i
+                                <a href="https://github.com/jpmalley/filetransferapp" class="btn btn-sm btn-outline-secondary rounded-pill" target="_blank" rel="noopener noreferrer">Source Code <i
                                     class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
-                                <a href="https://github.com/jpmalley/filetransferapp" class="btn btn-sm btn-outline-secondary rounded-pill">Source Code <i
-                                    class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
-                                <a class="btn btn-sm btn-secondary rounded-pill" data-bs-toggle="collapse" href="#fileCollapse" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                    Read More
+                                <a class="btn btn-sm btn-secondary rounded-pill" data-bs-toggle="collapse" href="#fileCollapse" role="button" aria-expanded="false">
+                                    Read More <i class="fa-solid fa-chevron-down ms-1"></i>
                                 </a>
                             </div>
                         </div>
@@ -105,7 +106,7 @@
                         presigned download URL that expires at the specified time. Object lifecycles in the
                         S3 bucket are managed to ensure objects are deleted permanently within 24 hours of
                         link expiration. HTTP/1.1 Caching is also managed to ensure expiration coincides
-                        with link expiration.</p>
+                        with link expiration. View a <a href="{% url "filetransfer" %}"  target="_blank" rel="noopener noreferrer">demo here</a>.</p>
                     <div class="row skills">
                         <div class="col-md-3">
                             <h3>Languages</h3>
@@ -149,7 +150,7 @@
         <div class="card box-shadow mt-4">
             <div class="card-body">
                 <div class="d-flex">
-                    <div class="">
+                    <a data-bs-toggle="collapse" href="#coachCollapse">
                         <div class="icon-group">
                             <div class="icon-circle secondary box-shadow"></div>
                             <div class="icon-circle primary box-shadow"></div>
@@ -157,15 +158,17 @@
                                 <i class="fa-solid fa-bullseye"></i>
                             </div>
                         </div>
-                    </div>
+                    </a>
                     <div class="flex-grow-1">
                         <div class="card-content d-flex flex-column flex-lg-row align-items-lg-center justify-content-between h-100">
-                            <h2 class="m-0">Coaching Website &amp; Marketing Platform</h2>
+                            <a data-bs-toggle="collapse" href="#coachCollapse">
+                                <h2 class="m-0">Marketing Platform for Coaches</h2>
+                            </a>
                             <div class="button-row mt-3 mt-lg-0 flex-column flex-sm-row">
-                                <a href="https://github.com/jpmalley/at-public" class="btn btn-sm btn-outline-secondary rounded-pill">Source Code <i
+                                <a href="https://github.com/jpmalley/at-public" class="btn btn-sm btn-outline-secondary rounded-pill" target="_blank" rel="noopener noreferrer">Source Code <i
                                     class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
-                                <a class="btn btn-sm btn-secondary rounded-pill" data-bs-toggle="collapse" href="#coachCollapse" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                    Read More
+                                <a class="btn btn-sm btn-secondary rounded-pill" data-bs-toggle="collapse" href="#coachCollapse" role="button" aria-expanded="false">
+                                    Read More <i class="fa-solid fa-chevron-down ms-1"></i>
                                 </a>
                             </div>
                         </div>
@@ -224,7 +227,7 @@
         <div class="card box-shadow mt-4">
             <div class="card-body">
                 <div class="d-flex">
-                    <div class="">
+                    <a data-bs-toggle="collapse" href="#unstableCollapse">
                         <div class="icon-group">
                             <div class="icon-circle secondary box-shadow"></div>
                             <div class="icon-circle primary box-shadow"></div>
@@ -232,15 +235,17 @@
                                 <i class="fa-solid fa-chess"></i>
                             </div>
                         </div>
-                    </div>
+                    </a>
                     <div class="flex-grow-1">
                         <div class="card-content d-flex flex-column flex-lg-row align-items-lg-center justify-content-between h-100">
-                            <h2 class="m-0">Unstable Games Landing Pages</h2>
+                            <a data-bs-toggle="collapse" href="#unstableCollapse">
+                                <h2 class="m-0">Unstable Games Landing Pages</h2>
+                            </a>
                             <div class="button-row mt-3 mt-lg-0">
-                                <a href="https://github.com/jpmalley/hts-landing-page" class="btn btn-sm btn-outline-secondary rounded-pill">Source Code <i
+                                <a href="https://github.com/jpmalley/hts-landing-page" class="btn btn-sm btn-outline-secondary rounded-pill" target="_blank" rel="noopener noreferrer">Source Code <i
                                     class="fa-solid fa-arrow-up-right-from-square ms-1"></i></a>
-                                <a class="btn btn-sm btn-secondary rounded-pill" data-bs-toggle="collapse" href="#unstableCollapse" role="button" aria-expanded="false" aria-controls="collapseExample">
-                                    Read More
+                                <a class="btn btn-sm btn-secondary rounded-pill" data-bs-toggle="collapse" href="#unstableCollapse" role="button" aria-expanded="false">
+                                    Read More <i class="fa-solid fa-chevron-down ms-1"></i>
                                 </a>
                             </div>
                         </div>
@@ -286,4 +291,7 @@
             </div>
         </div>
     </div>
+</div>
+<div class="tab-footer text-center my-5">
+    <button class="btn btn-lg btn-outline-secondary rounded-pill switch-tab-design">Design Projects <i class="fa-solid fa-pen-ruler ms-1"></i></button>
 </div>

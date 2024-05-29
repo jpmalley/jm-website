@@ -131,9 +131,9 @@ strong {
     z-index: 1000;
 }
 
-section.content {
+/* section.content {
     overflow: hidden;
-}
+} */
 
 /* ---------------------------------------------------
     NAV STYLES
@@ -415,6 +415,226 @@ section.intro.welcome {
     margin-bottom: 1rem;
 }
 
+.grid-container {
+    display: -webkit-box; /* Older versions of iOS Safari */
+    display: -ms-grid; /* IE11 / Edge Legacy */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 8px;
+    margin-bottom: 4rem;
+    width: 100%;
+}
+
+.grid-container > div {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-self: stretch;
+    justify-self: stretch;
+}
+
+.grid-01 { 
+    grid-area: 1 / 1 / 3 / 2;
+    background-image: url(../img/insights-cover.jpg);
+}
+
+.grid-02 { 
+    grid-area: 1 / 2 / 2 / 4;
+    background-image: url(../img/demitasse-cover.jpg);
+}
+
+.grid-03 { 
+    grid-area: 2 / 2 / 3 / 3;
+    background-image: url(../img/able-cover-image.jpg);
+    aspect-ratio: 1 / 1;
+}
+
+.grid-04 { 
+    grid-area: 2 / 3 / 3 / 4;
+    background-image: url(../img/brewsource-cover.jpg);
+}
+
+.grid-05 { 
+    grid-area: 3 / 1 / 4 / 3;
+    background-image: url(../img/ghd-coaster-cover.jpg);
+}
+
+.grid-06 { 
+    grid-area: 3 / 3 / 5 / 4;
+    background-image: url(../img/elsewhere-cover.jpg);
+}
+
+.grid-07 { 
+    grid-area: 4 / 1 / 5 / 2;
+    background-image: url(../img/recipe-cover.jpg);
+}
+
+.grid-08 { 
+    grid-area: 4 / 2 / 5 / 3;
+    background-image: url(../img/ma-cover.jpg);
+}
+
+.grid-09 { 
+    grid-area: 5 / 1 / 6 / 2;
+    background-image: url(../img/vl-cover.jpg);
+}
+
+.grid-10 {
+    grid-area: 5 / 2 / 6 / 4;
+    background-image: url(../img/waypoints-cover.jpg);
+}
+
+.grid-container > div > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-container > div > a > .grid-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.badges {
+    position: absolute;
+    bottom: 4px;
+    left: 8px;
+    max-width: calc(100% - 16px);
+}
+
+.badges > .badge {
+    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    transition: all 0.3s ease-in-out;
+    line-height: 0.8;
+}
+
+.badge .badge-text {
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    text-overflow: ellipsis;
+}
+
+.badge.expanded .badge-text {
+    opacity: 1;
+}
+
+.carousel .carousel-inner {
+    border-radius: 24px;
+    max-height: 60vw;
+    background-color: #ececec;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.btn-trans {
+    border: 2px var(--bs-secondary) solid;
+    background: rgba(84, 188, 129, .2);
+    padding: .5rem 1rem;
+    color: rgba(255, 255, 255, .8);
+    transition: color .2s;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: none;
+    margin: 3px;
+}
+
+.carousel-indicators .active {
+    background-color: #000;
+}
+
+.modal-img {
+    border-radius: 24px;
+}
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-gap: 12px;
+    }
+    .grid-container > div {
+        border-radius: 18px;
+    }
+    .badges > .badge {
+        line-height: 1;
+    }
+    .portfolio .card {
+        border-radius: 18px;
+    }
+}
+
+@media (min-width: 992px) {
+    .grid-container {
+        grid-gap: 18px;
+    }
+    .grid-container > div {
+        border-radius: 24px;
+    }
+    .badges {
+        bottom: 12px;
+        left: 16px;
+    }
+    .badges > .badge {
+        width: 20px;
+        height: 20px;
+    }
+    .badge .badge-text {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    .portfolio .card {
+        border-radius: 24px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .grid-container {
+        grid-gap: 20px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .grid-container {
+        grid-column-gap: 24px;
+        grid-row-gap: 24px;
+    }
+}
+
+.portfolio a {
+    text-decoration: none;
+}
+
+.portfolio .card {
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, .6);
+    color: #ffffff;
+}
+
 .icon-group {
     position: relative;
     width: 80px;
@@ -467,34 +687,8 @@ section.intro.welcome {
     top: 45%;
 }
 
-/* @media (min-width: 768px) {
-    .icon-group {
-        width: 100%;
-        padding-bottom: 100%;
-    }
-} */
-
-.grid-container {
-    display: -webkit-box; /* Older versions of iOS Safari */
-    display: -ms-grid; /* IE11 / Edge Legacy */
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-gap: 8px;
-    margin-bottom: 4rem;
-}
-
-.grid-container > div {
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    border-radius: 12px;
-}
-
-.portfolio .card {
-    border-radius: 12px;
-    background-color: rgba(0, 0, 0, .6);
-    color: #ffffff;
+.portfolio .card h2.active {
+    text-shadow: 0px 0px 10px rgba(247,146,38,1);
 }
 
 .button-row > a {
@@ -506,199 +700,6 @@ section.intro.welcome {
 @media (max-width: 575.98px) {
     .button-row > a {
         width: 100%;
-    }
-}
-
-.grid-container > div:before {
-    content: "";
-    display: block;
-    padding-bottom: 50%;
-}
-
-.grid-container > div > a {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-.grid-container > div > a > .grid-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.grid-01 { 
-    grid-area: 1 / 1 / 3 / 2;
-    background-image: url(../img/insights-cover.jpg);
-}
-
-.grid-02 { 
-    grid-area: 1 / 2 / 2 / 4;
-    background-image: url(../img/demitasse-cover.jpg);
-}
-
-.grid-03 { 
-    grid-area: 2 / 2 / 3 / 3;
-    background-image: url(../img/able-cover-image.jpg);
-}
-
-.grid-04 { 
-    grid-area: 2 / 3 / 3 / 4;
-    background-image: url(../img/brewsource-cover.jpg);
-}
-
-.grid-05 { 
-    grid-area: 3 / 1 / 4 / 3;
-    background-image: url(../img/ghd-coaster-cover.jpg);
-}
-
-.grid-06 { 
-    grid-area: 3 / 3 / 5 / 4;
-    background-image: url(../img/elsewhere-cover.jpg);
-}
-
-.grid-07 { 
-    grid-area: 4 / 1 / 5 / 2;
-    background-image: url(../img/recipe-cover.jpg);
-}
-
-.grid-08 { 
-    grid-area: 4 / 2 / 5 / 3;
-    background-image: url(../img/ma-cover.jpg);
-}
-
-.grid-09 { 
-    grid-area: 5 / 1 / 6 / 2;
-    background-image: url(../img/vl-cover.jpg);
-}
-
-.grid-10 {
-     grid-area: 5 / 2 / 6 / 4;
-     background-image: url(../img/waypoints-cover.jpg);
-}
-
-.carousel .carousel-inner {
-    border-radius: 24px;
-    max-height: 60vw;
-    background-color: #ececec;
-}
-
-.carousel img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.btn-trans {
-    border: 2px var(--bs-secondary) solid;
-    background: rgba(84, 188, 129, .2);
-    padding: .5rem 1rem;
-    color: rgba(255, 255, 255, .8);
-    transition: color .2s;
-}
-
-.carousel-indicators [data-bs-target] {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: #fff;
-    border: none;
-    margin: 3px;
-}
-
-.carousel-indicators .active {
-    background-color: #000;
-}
-
-.modal-img {
-    border-radius: 24px;
-}
-
-.badges {
-    position: absolute;
-    bottom: 4px;
-    left: 8px;
-    max-width: calc(100% - 16px);
-}
-
-.badges > .badge {
-    box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.3);
-    border-radius: 50%;
-    overflow: hidden;
-    white-space: nowrap;
-    max-width: 100%;
-    text-overflow: ellipsis;
-    transition: all 0.3s ease-in-out;
-    line-height: 0.8;
-}
-
-.badge .badge-text {
-    transition: all 0.2s ease-in-out;
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    max-width: 100%;
-    text-overflow: ellipsis;
-}
-
-.badge.expanded .badge-text {
-    opacity: 1;
-}
-
-@media (min-width: 768px) {
-    .grid-container {
-        grid-column-gap: 10px;
-        grid-row-gap: 10px;
-    }
-    .grid-container > div {
-        border-radius: 18px;
-    }
-    .badges > .badge {
-        line-height: 1;
-    }
-    .portfolio .card {
-        border-radius: 18px;
-    }
-}
-
-@media (min-width: 992px) {
-    .grid-container {
-        grid-column-gap: 14px;
-        grid-row-gap: 14px;
-    }
-    .grid-container > div {
-        border-radius: 24px;
-    }
-    .badges {
-        bottom: 12px;
-        left: 16px;
-    }
-    .badges > .badge {
-        width: 20px;
-        height: 20px;
-    }
-    .badge .badge-text {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    .portfolio .card {
-        border-radius: 24px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .grid-container {
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
-    }
-}
-
-@media (min-width: 1400px) {
-    .grid-container {
-        grid-column-gap: 24px;
-        grid-row-gap: 24px;
     }
 }
 
