@@ -117,13 +117,14 @@
                             </div>
                             <div class="certifications">
                                 <h2>Certifications</h2>
-                                <p class="mb-1"><strong>Certified Scrum Master &reg;</strong> <em>by The Scrum Alliance</em></p>
-                                <p><strong>Certified Scrum Product Owner &reg;</strong> <em>by The Scrum Alliance</em></p>
+                                <p class="mb-1"><strong class="text-primary">Certified Scrum Master</strong> &reg; <em>by The Scrum Alliance</em></p>
+                                <p><strong class="text-primary">Certified Scrum Product Owner</strong> &reg; <em>by The Scrum Alliance</em></p>
                             </div>
                             <div class="education">
                                 <h2>Education</h2>
                                 <div>
-                                    <p><strong>Bachelor of Arts, Graphic Design</strong><br> University of Missouri &ndash; Columbia</p>
+                                    <p><strong class="text-primary">University of Missouri &ndash; Columbia</strong><br> Bachelor of Arts, Graphic Design &ndash; 2013</p>
+                                    <p><strong class="text-primary">LaunchCode of St. Louis</strong><br> Coding Bootcamp &ndash; 2018</p>
                                 </div>
                             </div>
                             <div class="skills-attributes">
@@ -136,6 +137,9 @@
                                     <li>Effective manager that prioritizes open communication, empathy, and trust</li>
                                     <li>Experienced managing multiple projects with competing deadlines and implementing effective project management processes on the Trello platform</li>
                                 </ul>
+                            </div>
+                            <div class="download text-center my-5">
+                                <a href="{% static 'files/john_malley_resume.pdf' %}" class="btn btn-lg btn-outline-secondary rounded-pill">Download Resume <i class="fa-solid fa-download ms-1"></i></a>
                             </div>
                         </div>
                     </div>
@@ -150,7 +154,7 @@
 
 {% block extra_js %}
 <script>
-    gsap.from(".job, .certifications, .education, .skills-attributes", {
+    gsap.from(".job, .certifications, .education, .skills-attributes, .download", {
         y: "100%",
         autoAlpha: 0,
         duration: 1,
