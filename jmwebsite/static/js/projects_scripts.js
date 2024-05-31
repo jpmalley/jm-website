@@ -34,8 +34,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const grids = document.querySelectorAll('.grid-container > div');
 
     grids.forEach(grid => {
+        const bgAnimation = grid.querySelector('.bg-animation');
+        const gridContent = grid.querySelector('.grid-content');
+
         grid.addEventListener('mouseenter', () => {
-            gsap.to(grid, {
+            bgAnimation.style.display = 'block';
+            gsap.to(bgAnimation, {
                 scale: 1.01,
                 duration: 0.5,
                 ease: 'power2.out'
@@ -43,12 +47,21 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         grid.addEventListener('mouseleave', () => {
-            gsap.to(grid, {
+            gsap.to(bgAnimation, {
                 scale: 1,
+                duration: 0.5,
+                ease: 'power2.out',
+                onComplete: () => {
+                    bgAnimation.style.display = 'none';
+                }
+            });
+            gsap.to(bgAnimation, {
+                x: 0,
+                y: 0,
                 duration: 0.5,
                 ease: 'power2.out'
             });
-            gsap.to(grid, {
+            gsap.to(gridContent, {
                 x: 0,
                 y: 0,
                 duration: 0.5,
@@ -63,7 +76,14 @@ document.addEventListener("DOMContentLoaded", function() {
             const moveX = (x - rect.width / 2) / rect.width * 20;
             const moveY = (y - rect.height / 2) / rect.height * 20;
 
-            gsap.to(grid, {
+            gsap.to(bgAnimation, {
+                x: -moveX,
+                y: -moveY,
+                duration: 0.5,
+                ease: 'power2.out'
+            });
+
+            gsap.to(gridContent, {
                 x: moveX,
                 y: moveY,
                 duration: 0.5,
@@ -72,6 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
 
 // GSAP animation for hover effect
 function applyHoverEffects() {
