@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
         grid.addEventListener('mouseenter', () => {
             bgAnimation.style.display = 'block';
             gsap.to(bgAnimation, {
-                scale: 1.01,
+                scale: 0.99,
                 duration: 0.5,
                 ease: 'power2.out'
             });
