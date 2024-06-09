@@ -3,7 +3,7 @@ import dj_database_url
 import os
 
 env = os.environ.copy()
-SECRET_KEY = env['SECRET_KEY']
+SECRET_KEY = env['DJANGO_SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
