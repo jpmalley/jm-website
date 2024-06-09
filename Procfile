@@ -1,0 +1,1 @@
+web: gunicorn jmwebsite.wsgi --log-file -
