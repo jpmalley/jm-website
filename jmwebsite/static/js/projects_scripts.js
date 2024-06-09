@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
             bgAnimation.style.display = 'block';
             gsap.to(bgAnimation, {
                 scale: 0.99,
+                autoAlpha: 1,
                 duration: 0.5,
                 ease: 'power2.out'
             });
@@ -49,11 +50,9 @@ document.addEventListener("DOMContentLoaded", function() {
         grid.addEventListener('mouseleave', () => {
             gsap.to(bgAnimation, {
                 scale: 1,
+                autoAlpha: 0,
                 duration: 0.5,
                 ease: 'power2.out',
-                onComplete: () => {
-                    bgAnimation.style.display = 'none';
-                }
             });
             gsap.to(bgAnimation, {
                 x: 0,

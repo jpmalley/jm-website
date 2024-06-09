@@ -61,6 +61,7 @@ $(document).ready(function () {
             autoAlpha: 0,
             duration: .6
         })
+        console.log(file.type);
         getSignedRequest(file, expiresIn);
     })
 });
@@ -69,8 +70,9 @@ $(document).ready(function () {
 // Functions
 
 function getSignedRequest(file, expiresIn) {
+    var fileType = file.type || "application/octet-stream";
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", presignUploadUrl+"?file_name="+file.name+"&file_type="+file.type+"&expires_in="+expiresIn);
+    xhr.open("GET", presignUploadUrl + "?file_name=" + encodeURIComponent(file.name) + "&file_type=" + encodeURIComponent(fileType) + "&expires_in=" + encodeURIComponent(expiresIn));
     xhr.onreadystatechange = function(){
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
@@ -113,7 +115,7 @@ function getDownloadUrl(fileId, object, expiresIn) {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
                 var response = JSON.parse(xhr.responseText);
-                console.log(response.url);
+                // console.log(response.url);
                 var redirect = "/success/?download_url="+encodeURIComponent(response.url);
                 $(location).attr("href", redirect);
             } else {
